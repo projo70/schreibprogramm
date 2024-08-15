@@ -1,4 +1,4 @@
-package java12e;
+package editor;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,18 +9,18 @@ import javafx.stage.Stage;
 public class MainEditor extends Application{
 	@Override
 	public void start(Stage meineStage) throws Exception {
-		//eine Instanz von FXMLLoader erzeugen
+		//Instanz von FXMLLoader erzeugen
 		FXMLLoader meinLoader = new FXMLLoader(getClass().getResource("editor.fxml"));
-		//die Datei laden
+		//Datei laden
 		Parent root = meinLoader.load();
-		//den Controller beschaffen
+		//Controller beschaffen
 		FXMLControllerEditor meinController = meinLoader.getController();
-		//und die Bühne übergeben
+		//die Buehne Ã¼bergeben
 		meinController.setMeineStage(meineStage);
-		//die Szene erzeugen
-		//an den Konstruktor werden der oberste Knoten und die Größe übergeben
+		//Szene erzeugen
+		//an den Konstruktor oberste Knoten und Groesse uebergeben
 		Scene meineScene = new Scene(root,400,400);
-		//den Titel über stage setzen
+		//den Titel ueber stage setzen
 		meineStage.setTitle("JavaFX Editor");
 		//die Szene setzen
 		meineStage.setScene(meineScene);
